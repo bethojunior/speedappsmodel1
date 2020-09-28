@@ -19,3 +19,9 @@ Route::group(['prefix' => 'carousel'], function () {
         Route::delete('/{id}','Carousel\CarouselController@delete');
     });
 });
+
+Route::group(['prefix' => 'blog'], function () {
+    Route::group(['as' => 'blog'], function () {
+        Route::delete('/{id}','Blog\BlogController@delete');
+    });
+});

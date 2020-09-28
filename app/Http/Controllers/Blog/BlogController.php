@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Blog;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Blog\InsertBlogRequest;
+use App\Http\Responses\ApiResponse;
 use App\Services\Blog\BlogService;
 use Illuminate\Http\Request;
 
@@ -61,5 +62,21 @@ class BlogController extends Controller
         }catch (\Exception $exception){
             return redirect()->route('blog.create')->with('error','Erro ao inserir blog '.$exception->getMessage());
         }
+    }
+
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function delete($id){
+        try{
+            $delete = $this->service
+                ->delete($id);
+        }catch (\Exception $exception){
+            return ApiResponse::error('',$exception->getMessage());
+        }
+
+        return ApiResponse::success($delete,'Imagem excluida com sucesso');
     }
 }
