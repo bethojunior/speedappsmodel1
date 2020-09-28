@@ -20,7 +20,7 @@
                         <a href="#" class="btn btn-primary">Ler mais →</a>
                     </div>
                     <div class="card-footer text-muted">
-                        23/09/20 SpeedApss
+                        {{ \Carbon\Carbon::parse($blog->created_at)->format('d/m/Y')}}
                     </div>
                 </div>
             @endforeach

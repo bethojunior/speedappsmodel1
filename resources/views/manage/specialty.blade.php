@@ -4,7 +4,7 @@
 @endsection
 @section('title', 'Painel administrativo ')
 @section('content_header')
-    <h1 class="m-0 text-dark">Listagem Blogs</h1>
+    <h1 class="m-0 text-dark">Especialidades</h1>
 @stop
 
 @section('content')

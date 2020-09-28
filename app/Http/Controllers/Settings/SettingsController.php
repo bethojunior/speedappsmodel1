@@ -15,5 +15,13 @@ class SettingsController extends Controller
         return view('manage.manager');
     }
 
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function specialty()
+    {
+        return view('manage.specialty');
+    }
+
 
 }
