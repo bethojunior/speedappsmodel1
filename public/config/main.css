@@ -1,0 +1,13 @@
+.relative{
+    position: relative!important;
+}
+
+.main{
+    opacity: 0;
+}
+
+.main.active{
+    opacity: 1;
+    transition: 1s;
+}
+
