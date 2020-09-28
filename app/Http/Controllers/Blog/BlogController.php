@@ -40,6 +40,16 @@ class BlogController extends Controller
     }
 
     /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function list()
+    {
+        $blogs = $this->service
+            ->findAll();
+        return view('manage.listBlogs')->with(['blogs' => $blogs]);
+    }
+
+    /**
      * @param InsertBlogRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */

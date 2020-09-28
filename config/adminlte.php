@@ -243,7 +243,7 @@ return [
                 ],
                 [
                     'text' => 'Listagem',
-                    'url'  => '#',
+                    'url'  => 'blog/list',
                 ],
             ]
         ],
