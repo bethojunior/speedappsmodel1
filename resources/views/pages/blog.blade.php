@@ -12,7 +12,7 @@
             </h1>
 
             @foreach($blogs as $blog)
-                <div class="card mb-4">
+                <div value="{{ $blog->title }}" class="card mb-4 through-blogs">
                     <img class="card-img-top"  alt="Card image cap" src="{{ url('storage').'/'.$blog->image }}">
                     <div class="card-body">
                         <h2 class="card-title">{{ $blog->title }}</h2>
@@ -33,7 +33,7 @@
                 <h5 class="card-header card-header-mine">Buscar</h5>
                 <div class="card-body">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Digite aqui">
+                        <input type="text" id="search-blogs" class="form-control" placeholder="Digite aqui">
                         <span class="input-group-append">
                             <button class="btn btn-secondary" type="button">
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -93,6 +93,8 @@
         </div>
 
     </div>
-    <!-- /.row -->
-
 </div>
+
+@section('js')
+    <script src="{{ asset('js/modules/pages/blog/list.js') }}"></script>
+@endsection
