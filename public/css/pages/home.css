@@ -104,11 +104,22 @@ body {
 }
 
 @media (min-width: 992px){
-    .container.marketing .row.specialties .card.col-lg-4 {
+    .container.marketing .row.specialties .card.col-lg-3 {
         -ms-flex: 0 0 33.333333%!important;
         flex: 0 0 33.333333%!important;
         margin-right: 2vw!important;
-        max-width: 29.333333%!important;
+        max-width: 21.333333%!important;
+    }
+    .container.marketing .row.specialties .card.col-lg-3 .center img{
+        width: 14vw!important;
     }
 
+    .main .container.marketing .row.specialties .col-lg-12.blogs .row.col-lg-12.blogs .card.col-lg-3.mt-2{
+        background-color: black!important;
+    }
+}
+.container.marketing .row.specialties{
+    background: whitesmoke;
+    padding: 1vw;
+    border-radius: 1vw;
 }

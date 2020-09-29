@@ -27,7 +27,7 @@ class BlogService
      */
     public function findAll()
     {
-        return $this->repository->all();
+        return $this->repository->all()->sortDesc();
     }
 
     /**

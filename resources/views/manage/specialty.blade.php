@@ -22,14 +22,14 @@
                 <div class="form-group col-lg-12">
                     <span>Conteudo </span>
                     <textarea name="content" class="form-control"></textarea>
+                    <input type="submit" class="btn btn-success form-control col-lg-3 mt-2" value="Enviar">
                 </div>
+
             </div>
-            <div class="col-lg-6 position-relative choose-image-blog">
-                <span class="position-absolute p-3">As imagens devem seguir um padrão de 750 x 300</span>
+            <div class="col-lg-6 position-relative choose-image-blog mt-4">
                 <input class="position-absolute inputFile" id="choose-image-blog" type="file" name="image">
-                <img id="preview-image-blog" class="img-thumbnail" src="{{ asset('assets/images/icons/750x300.png') }}">
+                <img id="preview-image-blog" class="img-thumbnail" src="https://www.4devs.com.br/4devs_gerador_imagem.php?acao=gerar_imagem&txt_largura=138&txt_altura=138&extensao=png&fundo_r=0.06274509803921569&fundo_g=0.996078431372549&fundo_b=0.9568627450980393&texto_r=0&texto_g=0&texto_b=0&texto=138%20x%20138&tamanho_fonte=10">
             </div>
-            <input type="submit" class="btn btn-success" value="Enviar">
         </form>
     </div>
     <hr class="featurette-divider">
@@ -37,7 +37,7 @@
     <div class="row col-lg-12">
         @foreach($specialties as $specialty)
             <div value="{{ $specialty->title }}" class="card col-lg-3 ml-2 mr-2 specialty{{$specialty->id}} through-blogs">
-                <img class="card-img-top pt-2" src="{{ url('storage').'/'.$specialty->image }}">
+                <img width="13vw" class="card-img-top pt-2" src="{{ url('storage').'/'.$specialty->image }}">
                 <div class="card-body">
                     <h5 class="card-title"> {{ $specialty->title }} </h5>
                     <p class="card-text"> {{ $specialty->content }} </p>
