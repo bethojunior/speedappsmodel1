@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
+use App\Services\Specialty\SpecialtyService;
 use Illuminate\Http\Request;
 
 class SettingsController extends Controller
@@ -16,11 +17,13 @@ class SettingsController extends Controller
     }
 
     /**
+     * @param SpecialtyService $specialtyService
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function specialty()
+    public function specialty(SpecialtyService $specialtyService)
     {
-        return view('manage.specialty');
+        $specialties = $specialtyService->findAll();
+        return view('manage.specialty')->with(['specialties' => $specialties]);
     }
 
 

@@ -102,3 +102,13 @@ body {
         margin-top: 7rem;
     }
 }
+
+@media (min-width: 992px){
+    .container.marketing .row.specialties .card.col-lg-4 {
+        -ms-flex: 0 0 33.333333%!important;
+        flex: 0 0 33.333333%!important;
+        margin-right: 2vw!important;
+        max-width: 29.333333%!important;
+    }
+
+}

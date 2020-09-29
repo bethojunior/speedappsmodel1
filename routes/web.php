@@ -28,3 +28,6 @@ Route::middleware('auth')
 
 Route::middleware('auth')
     ->group(base_path('routes/private/blog.php'));
+
+Route::middleware('auth')
+    ->group(base_path('routes/private/specialty.php'));

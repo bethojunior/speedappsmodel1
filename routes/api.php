@@ -25,3 +25,8 @@ Route::group(['prefix' => 'blog'], function () {
         Route::delete('/{id}','Blog\BlogController@delete');
     });
 });
+Route::group(['prefix' => 'specialty'], function () {
+    Route::group(['as' => 'specialty'], function () {
+        Route::delete('/{id}','Specialties\SpecialtiesController@destroy');
+    });
+});
