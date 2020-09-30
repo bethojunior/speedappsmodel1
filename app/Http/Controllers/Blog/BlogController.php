@@ -40,6 +40,19 @@ class BlogController extends Controller
         return view('manage.insertBlog');
     }
 
+
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show($id)
+    {
+        $blog = $this->service
+            ->find($id);
+        return view('pages.ThisBlog')
+            ->with(['blog' => $blog]);
+    }
+
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */

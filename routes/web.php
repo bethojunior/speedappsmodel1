@@ -12,6 +12,7 @@ Route::get('login', function () {
 Route::get('/','HomeController@index');
 
 Route::get('/blog','Blog\BlogController@index');
+Route::get('/blog/{id}','Blog\BlogController@show');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'Settings\SettingsController@index')->name('home');

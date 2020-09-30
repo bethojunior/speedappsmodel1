@@ -70,7 +70,6 @@
 {{--            </div>--}}
 {{--        </div>--}}
 
-        <hr class="featurette-divider">
 
         <div class="row featurette">
             <div class="col-md-7">
@@ -107,12 +106,30 @@
         </div>
 
         <hr class="featurette-divider">
+
+        <footer class="row col-lg-12 container">
+            <div class="col-lg-8 col-sm-12">
+                <iframe class="col-lg-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.3385230384674!2d-38.498744585241!3d-3.7362054972817194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c7488813ab8a4f%3A0x9c81fe6c1b4644c6!2sCoopneuro%20Coop%20dos%20Med%20Neur%20E%20Neurcirur!5e0!3m2!1spt-BR!2sbr!4v1601408809597!5m2!1spt-BR!2sbr"  height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="col-lg-4 col-sm-12 form-group">
+                <label><h4>Entre em contato</h4></label>
+                <div class="form-group>">
+                    <input class="form-control" placeholder="Nome">
+                </div>
+                <div class="form-group> mt-2">
+                    <input class="form-control" placeholder="Contato">
+                </div>
+                <div class="form-group> mt-2">
+                    <textarea style="height: 6vw" class="form-control"> </textarea>
+                </div>
+                <div class="form-group> mt-2">
+                    <button class="btn btn-success col-lg-12">Enviar</button>
+                </div>
+            </div>
+        </footer>
+
     </div>
-    <footer class="container">
-        <iframe class="col-lg-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.3385230384674!2d-38.498744585241!3d-3.7362054972817194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c7488813ab8a4f%3A0x9c81fe6c1b4644c6!2sCoopneuro%20Coop%20dos%20Med%20Neur%20E%20Neurcirur!5e0!3m2!1spt-BR!2sbr!4v1601408809597!5m2!1spt-BR!2sbr"  height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-{{--        <p class="float-right"><a href="#">Voltar para o incio</a></p>--}}
-{{--        <p>&copy; 2020 SpeedApps &middot; </p>--}}
-    </footer>
+
 </main>
 
 @section('js')

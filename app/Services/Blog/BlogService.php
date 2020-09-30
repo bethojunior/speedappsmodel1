@@ -31,6 +31,16 @@ class BlogService
     }
 
     /**
+     * @param $id
+     * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|null
+     */
+    public function find($id)
+    {
+        return $this->repository->find($id);
+    }
+
+
+    /**
      * @param array $request
      * @return Blog
      */
